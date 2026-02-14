@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - KrishiSeva</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Specific Auth Styles inline for now or could be in style.css -->
+    <style>
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--bg-body) 0%, rgba(46, 125, 50, 0.1) 100%);
+            padding: 1rem;
+        }
+
+        .auth-card {
+            width: 100%;
+            max-width: 400px;
+            padding: 2.5rem;
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .auth-logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="auth-container">
+        <div class="card auth-card animate-fade-in">
+            <div class="auth-header">
+                <span class="auth-logo">🌱</span>
+                <h2 style="color: var(--primary);">Welcome Back</h2>
+                <p style="color: var(--text-muted);">Login to access your dashboard</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-control" required placeholder="farmer@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" required placeholder="••••••••">
+                </div>
+
+                <div id="errorMsg" style="display: none; margin-bottom: 1rem; font-size: 0.9rem;"></div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+            </form>
+
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <p style="font-size: 0.9rem; color: var(--text-muted);">
+                    Don't have an account? <a href="register.html"
+                        style="color: var(--primary); font-weight: 600;">Register here</a>
+                </p>
+                <p style="margin-top: 1rem;">
+                    <a href="index.html" style="font-size: 0.9rem; color: var(--text-muted);">← Back to Home</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

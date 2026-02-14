@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - KrishiSeva</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <span>🌱</span> KrishiSeva
+                <button class="menu-toggle-dash visible-mobile" id="closeSidebar"
+                    style="margin-left: auto; color: white; background: none; border: none;">✕</button>
+            </div>
+
+            <nav class="nav-menu">
+                <div class="nav-link active" onclick="loadModule('overview')">
+                    <span>📊</span> Dashboard
+                </div>
+                <div class="nav-link" onclick="loadModule('crops')">
+                    <span>🌾</span> Crop Management
+                </div>
+                <div class="nav-link" onclick="loadModule('market')">
+                    <span>🛒</span> Direct Market
+                </div>
+                <div class="nav-link" onclick="loadModule('queries')">
+                    <span>💬</span> Expert Queries
+                </div>
+                <div class="nav-link" onclick="loadModule('ideas')">
+                    <span>💡</span> Idea Box
+                </div>
+                <div class="nav-link" onclick="loadModule('schemes')">
+                    <span>📜</span> Govt Schemes
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="nav-link" onclick="logout()">
+                    <span>🚪</span> Logout
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Topbar -->
+            <header class="topbar">
+                <div style="display: flex; align-items: center;">
+                    <button class="menu-toggle-dash" id="openSidebar"
+                        style="background: none; border: none; font-size: 1.5rem; margin-right: 1rem; color: var(--text-main);">☰</button>
+                    <h2 id="headerTitle" style="font-size: 1.25rem;">Overview</h2>
+                </div>
+
+                <div class="user-profile">
+                    <button class="theme-toggle"
+                        style="background: none; border: none; font-size: 1.25rem; cursor: pointer;">🌙</button>
+                    <span id="userName" style="font-weight: 500;">Farmer</span>
+                    <div class="user-avatar" id="userAvatar">F</div>
+                </div>
+            </header>
+
+            <!-- Dynamic Content Area -->
+            <div id="contentArea" class="content-wrapper">
+                <!-- Content injected via JS -->
+                <div class="loader" style="text-align: center; margin-top: 5rem;">Loading...</div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
